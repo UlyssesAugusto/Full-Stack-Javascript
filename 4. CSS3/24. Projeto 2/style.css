@@ -115,16 +115,14 @@ a {
 
 .section__text-inline > p {
   margin-top: 1rem;
+  text-align: justify;
 }
 
-#hangouts img {
-  object-position: center;
-}
 
 .gallery__img {
   border-radius: 0.75rem;
-  height: 16rem;
-  width: 16rem;
+  height: 20rem;
+  width: 40rem;
   object-fit: cover;
   transform: rotate(-2deg); /* deg = degrees */
 }
@@ -146,7 +144,7 @@ a {
 
 .gallery__img-wrapper::after {
   content: "";
-  background-color: rgb(228, 26, 26);
+  background-color: rgb(255, 255, 255);
   border-radius: 999px;
   display: block;
   height: 1.25rem;
