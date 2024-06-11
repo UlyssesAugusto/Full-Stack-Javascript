@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalhando com links</title>
+  </head>
+  <body>
+    <h1>Trabalhando com links</h1>
+    <p>
+      Antes de entender sobre URLs absolutas e relativas é importante conhecer o
+      conceito que chamamos de “raiz”. A “raiz” ou “diretório raiz” é o caminho
+      inicial do site. Em nossos links da aula anterior a raiz é o arquivo
+      index.html. A raiz é a página onde caímos quando não especificamos nenhum
+      caminho na URL, apenas o endereço base:
+    </p>
+
+  </body>
+</html>
+
+<article>
+  <ol class="article-list">
+    <li>
+      Com a tag &lt;a&gt; também é possível criar âncoras, ou links, para dentro
+      da própria página onde o usuário está.
+    </li>
+    <li>Para isso precisamos de duas coisas:</li>
+    <li>
+      Criar um atributo “id” no elemento de destinoUtilizar o símbolo # seguido
+      do “id” de destino no atributo “href”
+    </li>
+    <li>Criar um atributo “id” no elemento de destino</li>
+    <li>Utilizar o símbolo # seguido do “id” de destino no atributo “href”</li>
+  </ol>
+  <div class="article-code">
+    <pre><code class="language-html">&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Trabalhando com Links&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Trabalhando com Links&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;Navegue entre os arquivos das aulas:&lt;/p&gt;
+        &lt;a href="/"&gt;Primeira Página&lt;/a&gt; |
+        &lt;a href="/formatacao/index.html"&gt;Aula: elementos de formatação&lt;/a&gt; |
+        &lt;a href="/titulos/index.html"&gt;Aula: títulos e parágrafos&lt;/a&gt; |
+        &lt;a href="/imagens/index.html"&gt;Aula: Imagens&lt;/a&gt; |
+        &lt;a href="/grecia"&gt;Artigo: Grécia antiga&lt;/a&gt;
+    &lt;/div&gt;
+
+		&lt;div&gt;
+        &lt;p&gt;Navegue entre as seções dessa página:&lt;/p&gt;
+        &lt;a href="#titulo-1"&gt;Título 1&lt;/a&gt; |
+        &lt;a href="#titulo-2"&gt;Título 2&lt;/a&gt; |
+        &lt;a href="#titulo-3"&gt;Título 3&lt;/a&gt; |
+        &lt;a href="#titulo-4"&gt;Título 4&lt;/a&gt; |
+        &lt;a href="#titulo-5"&gt;Título 5&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;h2 id="titulo-1"&gt;Título 1&lt;/h2&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+
+    &lt;h2 id="titulo-2"&gt;Título 2&lt;/h2&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+
+    &lt;h2 id="titulo-3"&gt;Título 3&lt;/h2&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+
+    &lt;h2 id="titulo-4"&gt;Título 4&lt;/h2&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+
+    &lt;h2 id="titulo-5"&gt;Título 5&lt;/h2&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+
+    &lt;h2 id="titulo-6"&gt;Título 6&lt;/h2&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+
+    &lt;h2 id="titulo-7"&gt;Título 7&lt;/h2&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus fugit rerum at rem. Nisi, debitis ad suscipit a dignissimos sed repellendus commodi reprehenderit excepturi, eos praesentium perspiciatis ipsa repellat?&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+</article>

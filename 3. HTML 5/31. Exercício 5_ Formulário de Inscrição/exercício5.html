@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 5</title>
+  </head>
+  <body>
+    <h1>Formulário de Inscrição</h1>
+
+    <form action="#" method="post">
+      <div>
+        <label for="nome">Nome:</label><br />
+        <input type="text" id="nome" name="nome" required />
+        <br /><br />
+      </div>
+
+      <div>
+        <label for="email">Email:</label><br />
+        <input type="email" name="email" id="email" required />
+        <br /><br />
+      </div>
+
+      <div>
+        <label for="whatsapp">WhatsApp</label><br />
+        <input type="tel" name="whatsapp" id="whatsapp" />
+        <br /><br />
+      </div>
+
+      <div>
+        <label>Área de Atuação</label><br />
+        <input
+          type="radio"
+          id="desenvolvimento"
+          name="area"
+          value="desenvolvimento"
+        />
+        <label for="desenvolvimento">Desenvolvimento</label>
+
+        <input
+          type="radio"
+          id="desenvolvimento"
+          name="area"
+          value="desenvolvimento"
+        />
+        <label for="desenvolvimento">QA</label>
+
+        <input
+          type="radio"
+          id="analisededados"
+          name="area"
+          value="analisededados"
+        />
+        <label for="analisededados">Análise de Dados</label>
+
+        <input
+          type="radio"
+          id="infraestrutura"
+          name="area"
+          value="infraestrutura"
+        />
+        <label for="infraestrutura">Infraestrutura</label>
+      </div>
+      <br />
+
+      <div>
+        <label for="observações">Observações</label><br />
+        <textarea
+          name="observações"
+          id="observações"
+          cols="30"
+          rows="3"
+        ></textarea>
+      </div>
+      <br />
+      <div>
+        <input
+          type="checkbox"
+          id="oferta-email"
+          name="interesses"
+          value="oferta-email"
+        />
+        <label>Desejo receber ofertas por e-mail.</label>
+      </div>
+      <br />
+
+      <div>
+        <input type="submit" name="enviar" value="enviar" id="enviar" />
+      </div>
+    </form>
+  </body>
+</html>

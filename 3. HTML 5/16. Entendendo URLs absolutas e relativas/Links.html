@@ -1,0 +1,140 @@
+<article>
+ <ol class="article-list">
+  <li>
+   Antes de entender sobre URLs absolutas e relativas é importante conhecer o conceito que chamamos de “raiz”. A “raiz” ou “diretório raiz” é o caminho inicial do site. Em nossos links da aula anterior a raiz é o arquivo index.html. A raiz é a página onde caímos quando não especificamos nenhum caminho na URL, apenas o endereço base:
+  </li>
+ </ol>
+ <div class="article-code">
+  <pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Trabalhando com links&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;h1&gt;Trabalhando com links&lt;/h1&gt;
+
+	&lt;p&gt;
+		Navegue entre os arquivos das aulas:
+		&lt;a href="http://localhost:5500/"&gt;Primeira página&lt;/a&gt;
+		&lt;a href="titulos.html"&gt;Aula: títulos e parágrafos&lt;/a&gt;
+		&lt;a href="formatacao.html"&gt;Aula: elementos de formatação&lt;/a&gt;
+		&lt;a href="imagens.html"&gt;Aula: imagens&lt;/a&gt;
+	&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Como se trata de um caminho dentro do nosso próprio site, podemos ocultar o endereço base e usar apenas uma barra (“/” ) para designar a raiz do site. Esse é um ponto bem importante, sempre que você encontrar um caminho que começa com a barra ele está calculando esse caminho a partir da raiz (ex.: “/caminho/do/arquivo.html”):
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Trabalhando com Links&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Trabalhando com Links&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;Navegue entre os arquivos das aulas:&lt;/p&gt;
+        &lt;a href="/"&gt;Primeira Página&lt;/a&gt; |
+        &lt;a href="../formatacao/index.html"&gt;Aula: elementos de formatação&lt;/a&gt; |
+        &lt;a href="../titulos"&gt;Aula: títulos e parágrafos&lt;/a&gt; |
+        &lt;a href="../imagens/index.html"&gt;Aula: Imagens&lt;/a&gt; |
+        &lt;a href="../grecia"&gt;Artigo: Grécia antiga&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Entendido isso, agora vamos ao assunto da aula. Uma URL relativa é o que temos feito até o momento, onde não começamos o seu caminho com a barra. Com isso, para encontrar o caminho o cálculo é feito relativo ao diretório atual:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Trabalhando com Links&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Trabalhando com Links&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;Navegue entre os arquivos das aulas:&lt;/p&gt;
+        &lt;a href="/"&gt;Primeira Página&lt;/a&gt; |
+        &lt;a href="../formatacao/index.html"&gt;Aula: elementos de formatação&lt;/a&gt; |
+        &lt;a href="../titulos"&gt;Aula: títulos e parágrafos&lt;/a&gt; |
+        &lt;a href="../imagens/index.html"&gt;Aula: Imagens&lt;/a&gt; |
+        &lt;a href="../grecia"&gt;Artigo: Grécia antiga&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Já para criar uma URL absoluta usamos a barra no começo:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Trabalhando com Links&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Trabalhando com Links&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;Navegue entre os arquivos das aulas:&lt;/p&gt;
+        &lt;a href="/"&gt;Primeira Página&lt;/a&gt; |
+        &lt;a href="/formatacao/index.html"&gt;Aula: elementos de formatação&lt;/a&gt; |
+        &lt;a href="/titulos/index.html"&gt;Aula: títulos e parágrafos&lt;/a&gt; |
+        &lt;a href="/imagens/index.html"&gt;Aula: Imagens&lt;/a&gt; |
+        &lt;a href="/grecia"&gt;Artigo: Grécia antiga&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+ <ol class="article-list">
+  <li>
+   Para exemplificar melhor, crie a pasta “site” e, dentro dela, crie a pasta “paginas”. Dentro de páginas crie dois arquivos, “contato.html” e “servicos.html”:site/paginas/servicos.html
+  </li>
+ </ol>
+ <div class="article-code">
+  <pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Serviços&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Página de serviços&lt;/h1&gt;
+
+    &lt;a href="contato.html"&gt;Contato (URL relativa)&lt;/a&gt;
+    &lt;a href="/site/paginas/contato.html"&gt;Contato (URL absoluta)&lt;/a&gt;
+
+    &lt;a href="../../links.html"&gt;Aula: links (URL relativa)&lt;/a&gt;
+    &lt;a href="/links"&gt;Aula: links (URL absoluta)&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+ <div class="article-paragraph">
+  site/paginas/contato.html
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Teste&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Página de contato&lt;/h1&gt;
+    
+    &lt;a href="servicos.html"&gt;Serviços (URL relativa)&lt;/a&gt;
+    &lt;a href="/site/paginas/servicos.html"&gt;Serviços (URL absoluta)&lt;/a&gt;
+
+    &lt;a href="../../links.html"&gt;Aula: links (URL relativa)&lt;/a&gt;
+    &lt;a href="/links"&gt;Aula: links (URL absoluta)&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+</article>

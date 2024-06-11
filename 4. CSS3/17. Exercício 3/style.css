@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header{
+    margin: 20px;
+}
+
+header p{
+    padding: 10px;
+}
+
+main section{
+    margin: 15px;
+}
+
+section h2 {
+    padding: 15px;
+    font-weight: 500;
+}
+
+section p{
+    font-weight: 400;
+}
+
+.botao1{
+    margin: 20px;
+    padding: 5px;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 40px;
+    color: white;
+    background-color: rgb(15, 15, 15);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+ul li{
+    margin: 15px 0px 0px 0px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.botao2{
+    width: 110px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 40px;
+    color: white;
+    background-color: rgb(88, 188, 255);
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+}
+
+.botao3{
+    width: 110px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 40px;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(15, 15, 15);
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+}
+
+
+footer {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    height: 40px;
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+}

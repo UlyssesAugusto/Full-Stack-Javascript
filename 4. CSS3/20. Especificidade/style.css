@@ -1,0 +1,22 @@
+h1 {
+    color: yellow !important;
+}
+
+
+/* CSS inline <h1 style="color: brown;">Especificidade</h1> */
+
+#azul {
+    color: blue;
+}
+
+.cinza{
+    color: gray;
+}
+
+body > h1 {
+    color: rgb(0, 213, 213);
+}
+
+h1 {
+    color: red;
+}
