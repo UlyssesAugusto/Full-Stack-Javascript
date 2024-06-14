@@ -1,0 +1,107 @@
+<article>
+ <h2 class="article-header">
+  Cadastro de Recrutas
+ </h2>
+ <ol class="article-list">
+  <li>
+   Vamos criar um arquivo HTML e incluir o script:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Cadastro de Recrutas</title>
+</head>
+
+<body>
+  <h1>Cadastro de Recrutas</h1>
+
+  <script src="./recrutas.js"></script>
+</body>
+
+</html></textarea>
+ <div class="article-paragraph">
+  Agora vamos criar o script e começar obtendo as informações do recruta usando o prompt:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const primeiroNome = prompt("Informe o primeiro nome do recruta:")
+const sobrenome = prompt("Informe o sobrenome do recruta:")
+const campoDeEstudo = prompt("Qual é o campo de estudo do recruta?")
+const anoDeNascimento = prompt("Qual é o ano de nascimento do recruta?")</code></pre>
+ </div>
+ <div class="article-paragraph">
+  E então exibimos essas informações usando o alert e ajustando o texto do nome completo e calculando a idade baseada no ano:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">alert(
+  "Recruta cadastrado com sucesso!\n" +
+  "\nNome completo: " + primeiroNome + " " + sobrenome +
+  "\nCampo de estudo: " + campoDeEstudo +
+  "\nIdade: " + (2022 - anoDeNascimento)
+)</code></pre>
+ </div>
+ <h2 class="article-header">
+  Calculadora de 4 Operações
+ </h2>
+ <ol class="article-list">
+  <li>
+   Começamos criando o arquivo HTML e incluindo o script:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Calculadora de 4 Operações</title>
+</head>
+
+<body>
+  <h1>Calculadora de 4 Operações</h1>
+
+  <script src="./calculadora.js"></script>
+</body>
+
+</html></textarea>
+ <div class="article-paragraph">
+  Depois de criar o script, vamos começar obtendo os dois números usando o prompt:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const entrada1 = prompt("Informe o primeiro número:")
+const entrada2 = prompt("Informe o segundo número:")
+
+const x = parseFloat(entrada1)
+const y = parseFloat(entrada2)</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Com os números vamos calcular os resultados das 4 operações:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const soma = x + y
+const subtracao = x - y
+const multiplicacao = x * y
+const divisao = x / y</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Por fim, vamos exibir os resultados na tela de forma organizada:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">alert(
+  "Resultados:\n" +
+  "\nSoma: " + soma +
+  "\nSubtração: " + subtracao +
+  "\nMultiplicação: " + multiplicacao +
+  "\nDivisão: " + divisao
+)</code></pre>
+ </div>
+</article>

@@ -1,0 +1,170 @@
+<article>
+ <h2 class="article-header">
+  Menu Interativo
+ </h2>
+ <ol class="article-list">
+  <li>
+   Vamos começar criando o script e a página html para o nosso programa:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Menu Interativo</title>
+</head>
+<body>
+  <h1>Menu Interativo</h1>
+  <script src="./menu.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  Depois precisamos criar uma variável para armazenar a opção do usuário e adicionar o laço do while:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let opcao = ""
+
+do {
+  
+} while (opcao !== "5");</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Dentro do do while vamos atualizar o valor da opção com um prompt que também contém o menu:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let opcao = ""
+
+do {
+  opcao = prompt(
+    "Seja bem-vindo(a)!\n" +
+    "\nEscolha uma das opções abaixo:" +
+    "\n1 - Opção Um" +
+    "\n2 - Opção Dois" +
+    "\n3 - Opção Três" +
+    "\n4 - Opção Quatro" +
+    "\n5 - Encerar"
+  )
+
+} while (opcao !== "5");</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Por fim, vamos usar um switch para controlar o comportamento de cada opção:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let opcao = ""
+
+do {
+  opcao = prompt(
+    "Seja bem-vindo(a)!\n" +
+    "\nEscolha uma das opções abaixo:" +
+    "\n1 - Opção Um" +
+    "\n2 - Opção Dois" +
+    "\n3 - Opção Três" +
+    "\n4 - Opção Quatro" +
+    "\n5 - Encerar"
+  )
+
+  switch (opcao) {
+    case "1":
+      alert("Você escolheu a opção 1.")
+      break
+    case "2":
+      alert("Você escolheu a opção 2.")
+      break
+    case "3":
+      alert("Você escolheu a opção 3.")
+      break
+    case "4":
+      alert("Você escolheu a opção 4.")
+      break
+    case "5":
+      alert("Encerrando o programa...")
+      break
+    default:
+      alert("Entrada inválida! Escolha uma das cinco opções.")
+  }
+} while (opcao !== "5");</code></pre>
+ </div>
+ <h2 class="article-header">
+  Controle Financeiro
+ </h2>
+ <ol class="article-list">
+  <li>
+   Como de costume, começamos criando o script e a página:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Controle Financeiro</title>
+</head>
+<body>
+  <h1>Controle Financeiro</h1>
+  <script src="./financas.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  Depois, dentro do script, precisamos inciar pedindo o saldo inicial e também criando a variável da opção do usuário:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let saldo = parseFloat(prompt("Informe a quantidade de dinheiro inicial:"))
+let opcao = ""</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Agora podemos adicionar o do while e dentro dele um prompt contendo o saldo atual e as opções disponíveis:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let saldo = parseFloat(prompt("Informe a quantidade de dinheiro inicial:"))
+let opcao = ""
+
+do {
+  opcao = prompt(
+    "Saldo disponível: R$ " + saldo +
+    "\n1 - Adicionar dinheiro" +
+    "\n2 - Remover dinheiro" +
+    "\n3 - Sair"
+  )
+
+} while (opcao !== "3");</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Para terminar, só precisamos adicionar um switch encarregado do comportamento de cada opção:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let saldo = parseFloat(prompt("Informe a quantidade de dinheiro inicial:"))
+let opcao = ""
+
+do {
+  opcao = prompt(
+    "Saldo disponível: R$ " + saldo +
+    "\n1 - Adicionar dinheiro" +
+    "\n2 - Remover dinheiro" +
+    "\n3 - Sair"
+  )
+
+  switch (opcao) {
+    case "1":
+      saldo += parseFloat(prompt("Informe o valor a ser adicionado:"))
+      break
+    case "2":
+      saldo -= prompt("Informe o valor a ser removido:")
+      break
+    case "3":
+      alert("Saindo...")
+      break
+    default:
+      alert("Entrada inválida.")
+      break
+  }
+} while (opcao !== "3");</code></pre>
+ </div>
+</article>

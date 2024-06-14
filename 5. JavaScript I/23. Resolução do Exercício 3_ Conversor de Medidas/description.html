@@ -1,0 +1,92 @@
+<article>
+ <h2 class="article-header">
+  Conversor de Medidas
+ </h2>
+ <ol class="article-list">
+  <li>
+   Como sempre, vamos começar criando o script e a página e então inserindo o script:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Conversor de Medidas</title>
+</head>
+<body>
+  <h1>Conversor de Medidas</h1>
+  <script src="./conversor.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  No script, a primeira coisa a fazer é obter o valor da medida a ser convertida:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const medida = parseFloat(prompt("Insira uma medida em metros:"))</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Depois pedimos ao usuário para escolher a unidade para a conversão:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const unidade = prompt(
+  "Para qual unidade de medida deseja converter?" +
+  "\n1 - milímetros (mm)" +
+  "\n2 - centímetros (cm)" +
+  "\n3 - decímetros (dm)" +
+  "\n4 - decâmetros (dam)" +
+  "\n5 - hectômetro (hm)" +
+  "\n6 - quilômetro (km)"
+)</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Por fim usamos o switch para mostrar os resultados de acordo com as diferentes opções:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">switch (unidade) {
+  case "1":
+    alert("Resultado: " + medida + "m = " + medida * 1000 + "mm")
+  case "2":
+    alert("Resultado: " + medida + "m = " + medida * 100 + "cm")
+  case "3":
+    alert("Resultado: " + medida + "m = " + medida * 10 + "dm")
+  case "4":
+    alert("Resultado: " + medida + "m = " + medida / 10 + "dam")
+  case "5":
+    alert("Resultado: " + medida + "m = " + medida / 100 + "hm")
+  case "6":
+    alert("Resultado: " + medida + "m = " + medida / 1000 + "km")
+}</code></pre>
+ </div>
+ <div class="article-paragraph">
+  E incluímos também um bloco default e os breaks em cada case para garantir que o default não seja ativado:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">switch (unidade) {
+  case "1":
+    alert("Resultado: " + medida + "m = " + medida * 1000 + "mm")
+    break
+  case "2":
+    alert("Resultado: " + medida + "m = " + medida * 100 + "cm")
+    break
+  case "3":
+    alert("Resultado: " + medida + "m = " + medida * 10 + "dm")
+    break
+  case "4":
+    alert("Resultado: " + medida + "m = " + medida / 10 + "dam")
+    break
+  case "5":
+    alert("Resultado: " + medida + "m = " + medida / 100 + "hm")
+    break
+  case "6":
+    alert("Resultado: " + medida + "m = " + medida / 1000 + "km")
+    break
+  default:
+    alert("Opção inválida!")
+    break
+}</code></pre>
+ </div>
+</article>

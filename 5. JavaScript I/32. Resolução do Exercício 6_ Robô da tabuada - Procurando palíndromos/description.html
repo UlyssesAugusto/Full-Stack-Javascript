@@ -1,0 +1,114 @@
+<article>
+ <h2 class="article-header">
+  Robô da Tabuada
+ </h2>
+ <ol class="article-list">
+  <li>
+   Como sempre, começamos criando o script e a página:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Robô da Tabuada</title>
+</head>
+<body>
+  <h2>Robô da Tabuada</h2>
+  <script src="./tabuada.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  Depois, no script, vamos começar pedindo que informe o número e criando também uma variável do tipo string para armazenarmos os resultados das multiplicações:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const numero = parseFloat(prompt("De qual número você deseja calcular a tabuada?"))
+let resultado = ""</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Então criamos um laço for que tem um fator que começa em 1, a primeira multiplicação, e vai até 20, a última. Dentro dele iremos concatenar o resultado na nossa string de resultado:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const numero = parseFloat(prompt("De qual número você deseja calcular a tabuada?"))
+let resultado = ""
+
+for (let fator = 1; fator &lt;= 20; fator++) {
+  resultado += " -&gt; " + numero + " x " + fator + " = " + (numero * fator) + "\n"
+}</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Por último, exibimos o resultado da tabuada com um alert:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const numero = parseFloat(prompt("De qual número você deseja calcular a tabuada?"))
+let resultado = ""
+
+for (let fator = 1; fator &lt;= 20; fator++) {
+  resultado += " -&gt; " + numero + " x " + fator + " = " + (numero * fator) + "\n"
+}
+
+alert("Resultado da Tabuada de " + numero + ":\n\n" + resultado)</code></pre>
+ </div>
+ <h2 class="article-header">
+  Procurando Palíndromos
+ </h2>
+ <ol class="article-list">
+  <li>
+   Começamos criando o script e a página html:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Procurando Palíndromos</title>
+</head>
+<body>
+  <h1>Procurando Palíndromos</h1>
+  <script src="./palindromo.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  No script, a primeira coisa que precisamos fazer é solicitar a palavra e criar uma variável para armazenar a palavra invertida:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const palavra = prompt("Informe uma palavra:")
+let palavraInvertida = ""</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Depois vamos criar um laço for que vai percorrer as posições da palavra, porém começando do último índice e indo até o primeiro:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const palavra = prompt("Informe uma palavra:")
+let palavraInvertida = ""
+
+for (let i = palavra.length - 1; i &gt;= 0; i--) {
+  palavraInvertida += palavra[i]
+}</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Para terminar, só precisamos criar uma condicional if else para verificar se a palavra é ou não um palíndromo e mostrar as mensagens de acordo:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const palavra = prompt("Informe uma palavra:")
+let palavraInvertida = ""
+
+for (let i = palavra.length - 1; i &gt;= 0; i--) {
+  palavraInvertida += palavra[i]
+}
+
+if (palavra === palavraInvertida) {
+  alert(palavra + " é um palíndromo!")
+} else {
+  alert(palavra + " não é um palíndromo!\n\n" + palavra + " !== " + palavraInvertida)
+}</code></pre>
+ </div>
+</article>

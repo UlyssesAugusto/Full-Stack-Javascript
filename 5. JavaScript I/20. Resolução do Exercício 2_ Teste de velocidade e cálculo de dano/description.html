@@ -1,0 +1,115 @@
+<article>
+ <h2 class="article-header">
+  Teste de Velocidade
+ </h2>
+ <ol class="article-list">
+  <li>
+   Primeiro vamos criar os arquivos js e html e então incluir o script na página:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Teste de Velocidade</title>
+</head>
+<body>
+  <h1>Teste de Velocidade</h1>
+  <script src="./velocidade.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  Em seguida vamos começar obtendo os nomes e velocidades dos dois veículos:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const veiculo1 = prompt("Informe o nome do primeiro veículo:")
+const velocidade1 = parseFloat(prompt("Informe a velocidade do primeiro veículo:"))
+
+const veiculo2 = prompt("Informe o nome do segundo veículo:")
+const velocidade2 = parseFloat(prompt("Informe a velocidade do segundo veículo:"))</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Agora vamos escrever um IF para exibir o resultado apropriado na tela:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">if (velocidade1 &gt; velocidade2) {
+  alert(veiculo1 + " é mais rápido do que " + veiculo2)
+} else if (velocidade2 &gt; velocidade1) {
+  alert(veiculo2 + " é mais rápido do que " + veiculo1)
+} else {
+  alert(veiculo1 + " e " + veiculo2 + " possuem velocidades iguais.")
+}</code></pre>
+ </div>
+ <h2 class="article-header">
+  Cálculo de Dano
+ </h2>
+ <ol class="article-list">
+  <li>
+   Vamos começar criando os arquivos e incluindo o script na página:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Cálculo de Dano</title>
+</head>
+<body>
+  <h1>Cálculo de Dano</h1>
+  <script src="./dano.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  Agora vamos obter os dados do personagem atacante:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const atacante = prompt("Qual é o nome do personagem atacante?")
+const poderDeAtaque = parseFloat(prompt("Qual é o seu poder de ataque?"))</code></pre>
+ </div>
+ <div class="article-paragraph">
+  E então os dados do personagem defensor:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const defensor = prompt("Qual é nome do personagem defensor?")
+let pontosDeVida = parseFloat(prompt("Quantos pontos de vida ele possui?"))
+const poderDeDefesa = parseFloat(prompt("Qual é o seu poder de defesa?"))
+const possuiEscudo = prompt("Ele possui um escudo? (Sim/Não)")</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Vamos criar também uma variável para armazenar o dano que será causado:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let danoCausado = 0</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Agora vamos calcular o dano de acordo com as regras e subtrair o dano dos pontos de vida:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">if (poderDeAtaque &gt; poderDeDefesa &amp;&amp; possuiEscudo === "Não") {
+  danoCausado = poderDeAtaque - poderDeDefesa
+} else if (poderDeAtaque &gt; poderDeDefesa &amp;&amp; possuiEscudo === "Sim") {
+  danoCausado = (poderDeAtaque - poderDeDefesa) / 2
+}
+
+pontosDeVida -= danoCausado</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Por último, só precisamos exibir o dano causado e os dados atualizados dos personagens:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">alert(atacante + " causou " + danoCausado + " pontos de dano em " + defensor)
+alert(
+  atacante + "\nPoder de ataque: " + poderDeAtaque + "\n\n" +
+  defensor + "\nPontos de vida: " + pontosDeVida +
+  "\nPoder de defesa: " + poderDeDefesa + "\nPossui escudo: " + possuiEscudo
+)</code></pre>
+ </div>
+</article>

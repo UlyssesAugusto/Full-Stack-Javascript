@@ -1,0 +1,60 @@
+<article>
+ <h2 class="article-header">
+  Visitando Novas Cidades
+ </h2>
+ <ol class="article-list">
+  <li>
+   Como de costume, começamos criando o script e a página html:
+  </li>
+ </ol>
+ <textarea cols="80" readonly="" rows="10">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Visitando Novas Cidades</title>
+</head>
+<body>
+  <h1>Visitando Novas Cidades</h1>
+  <script src="./cidades.js"></script>
+</body>
+</html></textarea>
+ <div class="article-paragraph">
+  No script, vamos primeiro obtendo o nome do turista e então inicializar as variáveis de contagem e nomes das cidades:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">const turista = prompt("E aí, turista! Qual é o seu nome?")
+let cidades = ""
+let contagem = 0</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Depois podemos perguntar se alguma cidade foi visitada:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">let continuar = prompt("Você visitou alguma cidade? (Sim/Não)")</code></pre>
+ </div>
+ <div class="article-paragraph">
+  E então usamos o while para perguntar o nome da cidade, adicionar essa cidade às visitadas e então perguntar novamente se alguma outra cidade foi visitada. Isso vai continuar enquanto a resposta for “Sim”:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">while (continuar === "Sim") {
+  let cidade = prompt("Qual é o nome da cidade visitada?")
+  cidades += " - " + cidade + "\n"
+  contagem++
+  continuar = prompt("Você visitou alguma outra cidade? (Sim/Não)")
+}</code></pre>
+ </div>
+ <div class="article-paragraph">
+  Por último só precisamos exibir a mensagem final:
+ </div>
+ <div class="article-code">
+  <pre><code class="language-html">alert(
+  "Turista: " + turista +
+  "\nQuantidade de cidades visitadas: " + contagem +
+  "\nCidades visitadas:\n" + cidades
+)</code></pre>
+ </div>
+</article>
