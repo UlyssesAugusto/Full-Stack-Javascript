@@ -11,10 +11,9 @@ const divisao = x / y
 
 alert(
     "Resultados:\n" +
-    "\n Soma: " + soma +
-    "\n Subtração: " + subtracao +
-    "\n Multiplicação: " + multiplicacao +
-    "\n divisão: " + divisao
-
-    
+    "\nSoma: " + soma +
+    "\nSubtração: " + subtracao +
+    "\nMultiplicação: " + multiplicacao +
+    "\ndivisão: " + divisao
+   
 )
