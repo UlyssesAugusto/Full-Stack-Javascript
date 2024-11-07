@@ -1,0 +1,68 @@
+<article>
+ <h2 class="article-header">
+  O que são?
+ </h2>
+ <div class="article-code">
+  <pre><code class="language-html">// Funções de alta-ordem, ou high-order functions, são funções que
+// recebem outras funções como parâmetro e as executam em algum momento
+function calcular(a, b, operacao) {
+  console.log("Realizando uma operação.")
+  const resultado = operacao(a, b)
+  return resultado
+}</code></pre>
+ </div>
+ <h2 class="article-header">
+  Referenciar a função vs Chamar a função
+ </h2>
+ <div class="article-code">
+  <pre><code class="language-html">// Repare que não usamos os () ao lado do nome da função,
+// porque ao fazer isso estaríamos executando a função
+function somar(x, y) {
+  console.log("Realizando soma.")
+  return x + y
+}
+calcular(3, 5, somar)
+console.log(somar)       // Retorna a própria função
+console.log(somar(1, 1)) // Chama a função (retorna o resultado da função)</code></pre>
+ </div>
+ <h2 class="article-header">
+  Funções anônimas como parâmetros
+ </h2>
+ <div class="article-code">
+  <pre><code class="language-html">// Também podemos escrever funções anônimas dentro da própria chamada da high-order function
+calcular(9, 2, function (x, y) {
+  console.log("Realizando substração.")
+  return x - y
+})</code></pre>
+ </div>
+ <h2 class="article-header">
+  Exemplo real
+ </h2>
+ <div class="article-code">
+  <pre><code class="language-html">// Essas funções que são passadas como parâmetros geralmente são chamadas de callbacks
+// Um exemplo comum de high-order function no javascript é a função .forEach() dos arrays
+function exibirElemento(elemento, indice, array) {
+  console.log({
+    elemento,
+    indice,
+    array
+  })
+}
+
+const lista = ["Maçã", "Banana", "Laranja", "Limão", "Uva"]
+// Forma tradicional
+for (let i = 0; i &lt; lista.length; i++) {
+  exibirElemento(lista[i], i, lista)
+}
+// Forma funcional
+lista.forEach(exibirElemento)
+// Também poderia ser feito:
+lista.forEach(function (elemento, indice, array) {
+  console.log({
+    elemento,
+    indice,
+    array
+  })
+})</code></pre>
+ </div>
+</article>
