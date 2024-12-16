@@ -1,0 +1,17 @@
+Explicação do Código JavaScript
+Variáveis Globais: Define o quadro de jogo (gameBoard), configurações como o tamanho do quadro (boardSize), a posição inicial da cobra (snake) e a direção inicial (direction). A posição da comida é gerada aleatoriamente.
+
+Função startGame: Inicializa o jogo, definindo um intervalo para atualizar o quadro e adicionando um evento para ouvir as teclas de direção.
+
+Função updateGame: Atualiza o estado do jogo em cada quadro:
+
+Move a cobra na direção atual (moveSnake).
+Verifica se a cobra colidiu com a parede ou com ela mesma (checkCollision). Se houver colisão, o jogo para.
+Verifica se a cobra comeu a comida (checkFoodCollision). Se sim, ela cresce (growSnake) e uma nova posição para a comida é gerada.
+Função moveSnake: Calcula a nova posição da cabeça da cobra e move o corpo, removendo a última célula.
+
+Funções de Colisão: checkCollision verifica se a cobra bateu nas paredes ou no próprio corpo, enquanto checkFoodCollision verifica se a cabeça da cobra está na mesma posição que a comida.
+
+Função changeDirection: Muda a direção da cobra com base nas teclas de seta pressionadas, impedindo a mudança para a direção oposta direta.
+
+Função drawGame: Desenha a cobra e a comida. Cada segmento da cobra é representado como um elemento div em uma posição específica com base na coordenada x, y multiplicada pelo tamanho da célula (cellSize).
